@@ -1,3 +1,4 @@
 /packages
-/ModalWithValidation/bin
 /ModalWithValidation/obj
+/ModalWithValidation/*.user
+/ModalWithValidation/bin
