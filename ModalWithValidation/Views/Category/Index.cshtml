@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ModalWithValidation.Categories>
+
+@{
+    ViewBag.Title = "CategoryList";
+}
+
+<h2>CategoryList</h2>
+
+<p>
+    <a data-toggle="modal" class="btn btn-primary" href="/Category/Create" data-target="#createModal" data-whatever="新增 (old)">新增 (old)</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="Title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div id="contentBody" class="modal-content"></div>
+    </div>
+</div>
